@@ -43,7 +43,9 @@ namespace FizzBuzz
 
         public virtual string GetNext()
         {
-            throw new NotImplementedException();
+            ++_currentNumber;
+
+            return string.Empty;
         }
 
         #endregion
