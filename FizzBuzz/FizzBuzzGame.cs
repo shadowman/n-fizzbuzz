@@ -15,6 +15,9 @@ namespace FizzBuzz
             if (number % 3 == 0)
                 return FizzBuzzGame.Fizz;
 
+            if (number % 5 == 0)
+                return FizzBuzzGame.Buzz;
+
             return number.ToString();
         }
 
