@@ -40,10 +40,29 @@ namespace FizzBuzz.Tests
             {
                 var currentNumber = game.CurrentNumber;
                 var nextNumber = currentNumber + 1;
+                var response = game.GetNext();
 
                 if (nextNumber % 3 != 0 && nextNumber % 5 != 0)
                 {
-                    Assert.AreEqual(game.GetNext(), nextNumber.ToString());
+                    Assert.AreEqual(response, nextNumber.ToString());
+                }
+            }
+        }
+
+        [TestMethod]
+        public void GetNextReturnsFizzIfTheNextNumberInTheSequenceIsDivisibleBy3ButNot15()
+        {
+            var game = new FizzBuzzGame();
+
+            for (int i = 0; i < 100; i++)
+            {
+                var currentNumber = game.CurrentNumber;
+                var nextNumber = currentNumber + 1;
+                var response = game.GetNext();
+
+                if (nextNumber % 3 == 0 && nextNumber % 15 != 0)
+                {
+                    Assert.AreEqual(response, FizzBuzzGame.Fizz);
                 }
             }
         }

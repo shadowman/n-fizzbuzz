@@ -17,6 +17,16 @@ namespace FizzBuzz
 
         #endregion
 
+        #region Static Fields
+
+        public static string Fizz = "Fizz";
+
+        public static string Buzz = "Buzz";
+
+        public static string FizzBuzz = "FizzBuzz";
+
+        #endregion
+
         #region Properties
 
         private int _currentNumber;
