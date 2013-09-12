@@ -1,1 +1,7 @@
 *.suo
+/FizzBuzz/bin
+/FizzBuzz/obj
+
+/FizzBuzz.Tests/bin
+/FizzBuzz.Tests/obj
+/TestResults
