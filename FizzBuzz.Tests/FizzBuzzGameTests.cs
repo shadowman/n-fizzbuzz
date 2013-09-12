@@ -30,5 +30,22 @@ namespace FizzBuzz.Tests
                 Assert.AreEqual(game.CurrentNumber, currentNumber + 1);
             }
         }
+
+        [TestMethod]
+        public void GetNextReturnsTheNumberIfTheNextNumberInTheSequenceIsNotDivisibleBy5Or3()
+        {
+            var game = new FizzBuzzGame();
+
+            for (int i = 0; i < 100; i++)
+            {
+                var currentNumber = game.CurrentNumber;
+                var nextNumber = currentNumber + 1;
+
+                if (nextNumber % 3 != 0 && nextNumber % 5 != 0)
+                {
+                    Assert.AreEqual(game.GetNext(), nextNumber.ToString());
+                }
+            }
+        }
     }
 }
