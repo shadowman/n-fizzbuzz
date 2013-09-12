@@ -12,7 +12,7 @@ namespace FizzBuzz
 
         public static string TranslateNumber(int number)
         {
-            throw new NotImplementedException();
+            return number.ToString();
         }
 
         #endregion
@@ -43,9 +43,7 @@ namespace FizzBuzz
 
         public virtual string GetNext()
         {
-            ++_currentNumber;
-
-            return string.Empty;
+            return FizzBuzzGame.TranslateNumber(++_currentNumber);
         }
 
         #endregion
