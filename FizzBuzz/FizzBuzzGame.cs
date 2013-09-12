@@ -12,6 +12,9 @@ namespace FizzBuzz
 
         public static string TranslateNumber(int number)
         {
+            if (number % 3 == 0)
+                return FizzBuzzGame.Fizz;
+
             return number.ToString();
         }
 
