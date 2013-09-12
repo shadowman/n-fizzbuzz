@@ -84,5 +84,23 @@ namespace FizzBuzz.Tests
                 }
             }
         }
+
+        [TestMethod]
+        public void GetNextReturnsFizzBuzzIfTheNextNumberInTheSequenceIsDivisibleBy15()
+        {
+            var game = new FizzBuzzGame();
+
+            for (int i = 0; i < 100; i++)
+            {
+                var currentNumber = game.CurrentNumber;
+                var nextNumber = currentNumber + 1;
+                var response = game.GetNext();
+
+                if (nextNumber % 15 == 0)
+                {
+                    Assert.AreEqual(response, FizzBuzzGame.FizzBuzz);
+                }
+            }
+        }
     }
 }
