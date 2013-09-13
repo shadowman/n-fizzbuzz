@@ -102,5 +102,18 @@ namespace FizzBuzz.Tests
                 }
             }
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void CallTranslateNumberWithArbitraryNegativeNumberThrowsArgumentOutOfRangeException()
+        {
+            var game = new FizzBuzzGame();
+
+            Random rnd = new Random();
+
+            var number = rnd.Next(-int.MaxValue, 0);
+
+            FizzBuzzGame.TranslateNumber(number);
+        }
     }
 }
