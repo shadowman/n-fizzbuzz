@@ -115,5 +115,14 @@ namespace FizzBuzz.Tests
 
             FizzBuzzGame.TranslateNumber(number);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void CallTranslateNumberWithNumber0ThrowsArgumentOutOfRangeException()
+        {
+            var game = new FizzBuzzGame();
+
+            FizzBuzzGame.TranslateNumber(0);
+        }
     }
 }
