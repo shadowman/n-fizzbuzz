@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,9 @@ namespace FizzBuzz
 
         public static string TranslateNumber(int number)
         {
+            if (number < 0)
+                throw new ArgumentOutOfRangeException("number");
+
             if (number % 15 == 0)
                 return FizzBuzz;
 
