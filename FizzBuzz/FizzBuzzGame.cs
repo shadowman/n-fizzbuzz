@@ -13,7 +13,7 @@ namespace FizzBuzz
 
         public static string TranslateNumber(int number)
         {
-            if (number < 0)
+            if (number <= 0)
                 throw new ArgumentOutOfRangeException("number");
 
             if (number % 15 == 0)
